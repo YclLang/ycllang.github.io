@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ycllang.github.io/"/>
-  <updated>2018-08-08T10:35:33.643Z</updated>
+  <updated>2018-09-28T07:54:12.356Z</updated>
   <id>http://ycllang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring���ʽ�������</title>
+    <link href="http://ycllang.github.io/2018/09/28/spring-transaction/"/>
+    <id>http://ycllang.github.io/2018/09/28/spring-transaction/</id>
+    <published>2018-09-28T07:54:12.354Z</published>
+    <updated>2018-09-28T07:54:12.356Z</updated>
+    
+    <content type="html"><![CDATA[<p>JDBC���������Spring2.0�������ֱ��ʽʵ��<br>1��PlatformTransactionManager<br>2��TransactionTemplate</p><p>��ҪѧϰPlatformTransactionManager,����PlatformTransactionManager,����һ��ʹ������<br>ʵ����DataSourceTransactionManager��</p><p>1��ʵ��������Դ������<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2������һ������Ķ��塣<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3�����ö�������Ĵ�����Ϊ��һ��ΪPROPAGATION_REQUIRED��<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4������ҵ�񷽷�ǰ������TransactionStatusʵ����<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5��֮��ʹ�þ����SQL�����������쳣����ع�����<br>    transactionManager.rollback(status);<br>6��ҵ������,���ύ����<br>    transactionManager.commit(status);</p><p>���ӣ�</p><p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p><p>��ֱ��ʹ��springע��� transactionManager;</p><p>//��������<br>DefaultTransactionDefinition def = new DefaultTransactionDefinition();</p><p>def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>//�����������<br>TransactionStatus status = tran.getTransaction(def);<br>try {<br>    //TODO; do something()<br>    tran.commit(status);<br>} catch (Exception ex) {<br>t   ran.rollback(status);<br>}</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;JDBC���������Spring2.0�������ֱ��ʽʵ��&lt;br&gt;1��PlatformTransactionManager&lt;br&gt;2��TransactionTemplate&lt;/p&gt;
+&lt;p&gt;��ҪѧϰPlatformTransactionManager,��
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>yangcl</title>

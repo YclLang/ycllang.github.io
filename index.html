@@ -234,6 +234,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ycllang.github.io/2018/09/28/spring-transaction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChaoLang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oymkn4m7b.bkt.clouddn.com/WechatIMG5.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="live in Happyness">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/28/spring-transaction/" itemprop="url">Spring���ʽ�������</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T15:54:12+08:00">
+                2018-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>JDBC���������Spring2.0�������ֱ��ʽʵ��<br>1��PlatformTransactionManager<br>2��TransactionTemplate</p>
+<p>��ҪѧϰPlatformTransactionManager,����PlatformTransactionManager,����һ��ʹ������<br>ʵ����DataSourceTransactionManager��</p>
+<p>1��ʵ��������Դ������<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2������һ������Ķ��塣<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3�����ö�������Ĵ�����Ϊ��һ��ΪPROPAGATION_REQUIRED��<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4������ҵ�񷽷�ǰ������TransactionStatusʵ����<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5��֮��ʹ�þ����SQL�����������쳣����ع�����<br>    transactionManager.rollback(status);<br>6��ҵ������,���ύ����<br>    transactionManager.commit(status);</p>
+<p>���ӣ�</p>
+<p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p>
+<p>��ֱ��ʹ��springע��� transactionManager;</p>
+<p>//��������<br>DefaultTransactionDefinition def = new DefaultTransactionDefinition();</p>
+<p>def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>//�����������<br>TransactionStatus status = tran.getTransaction(def);<br>try {<br>    //TODO; do something()<br>    tran.commit(status);<br>} catch (Exception ex) {<br>t   ran.rollback(status);<br>}</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ycllang.github.io/2018/08/08/yangcl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -637,7 +764,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
