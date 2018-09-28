@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ycllang.github.io/"/>
-  <updated>2018-09-28T07:54:12.356Z</updated>
+  <updated>2018-09-28T08:12:06.947Z</updated>
   <id>http://ycllang.github.io/</id>
   
   <author>
@@ -17,20 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Spring���ʽ�������</title>
+    <title>Spring编程式事务管理</title>
     <link href="http://ycllang.github.io/2018/09/28/spring-transaction/"/>
     <id>http://ycllang.github.io/2018/09/28/spring-transaction/</id>
-    <published>2018-09-28T07:54:12.354Z</published>
-    <updated>2018-09-28T07:54:12.356Z</updated>
+    <published>2018-09-28T08:12:06.892Z</published>
+    <updated>2018-09-28T08:12:06.947Z</updated>
     
-    <content type="html"><![CDATA[<p>JDBC���������Spring2.0�������ֱ��ʽʵ��<br>1��PlatformTransactionManager<br>2��TransactionTemplate</p><p>��ҪѧϰPlatformTransactionManager,����PlatformTransactionManager,����һ��ʹ������<br>ʵ����DataSourceTransactionManager��</p><p>1��ʵ��������Դ������<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2������һ������Ķ��塣<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3�����ö�������Ĵ�����Ϊ��һ��ΪPROPAGATION_REQUIRED��<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4������ҵ�񷽷�ǰ������TransactionStatusʵ����<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5��֮��ʹ�þ����SQL�����������쳣����ع�����<br>    transactionManager.rollback(status);<br>6��ҵ������,���ύ����<br>    transactionManager.commit(status);</p><p>���ӣ�</p><p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p><p>��ֱ��ʹ��springע��� transactionManager;</p><p>//��������<br>DefaultTransactionDefinition def = new DefaultTransactionDefinition();</p><p>def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>//�����������<br>TransactionStatus status = tran.getTransaction(def);<br>try {<br>    //TODO; do something()<br>    tran.commit(status);<br>} catch (Exception ex) {<br>t   ran.rollback(status);<br>}</p>]]></content>
+    <content type="html"><![CDATA[<p>JDBC事务管理在Spring2.0下有两种编程式实现<br>1、PlatformTransactionManager<br>2、TransactionTemplate</p><p>主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的<br>实现类DataSourceTransactionManager。</p><p>1、实例化数据源参数。<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2、建立一个事务的定义。<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3、设置定义事务的传播行为，一般为PROPAGATION_REQUIRED。<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4、调用业务方法前，创建TransactionStatus实例。<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5、之后使用具体的SQL操作，发生异常，则回滚事务。<br>    transactionManager.rollback(status);<br>6、业务正常,则提交事务。<br>    transactionManager.commit(status);</p><p>例子：</p><p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p><p>可直接使用spring注入的 transactionManager;</p><p>//事务定义类<br>DefaultTransactionDefinition def = new DefaultTransactionDefinition();</p><p>def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>//返回事务对象<br>TransactionStatus status = tran.getTransaction(def);<br>try {<br>    //TODO; do something()<br>    tran.commit(status);<br>} catch (Exception ex) {<br>t   ran.rollback(status);<br>}</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;JDBC���������Spring2.0�������ֱ��ʽʵ��&lt;br&gt;1��PlatformTransactionManager&lt;br&gt;2��TransactionTemplate&lt;/p&gt;
-&lt;p&gt;��ҪѧϰPlatformTransactionManager,��
+        &lt;p&gt;JDBC事务管理在Spring2.0下有两种编程式实现&lt;br&gt;1、PlatformTransactionManager&lt;br&gt;2、TransactionTemplate&lt;/p&gt;
+&lt;p&gt;主要学习PlatformTransactionManager,对于PlatformTran
       
     
     </summary>
