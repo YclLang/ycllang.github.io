@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ycllang.github.io/"/>
-  <updated>2018-09-30T04:54:58.194Z</updated>
+  <updated>2018-10-01T03:08:21.750Z</updated>
   <id>http://ycllang.github.io/</id>
   
   <author>
@@ -17,75 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello World</title>
+    <link href="http://ycllang.github.io/2018/10/01/hello-world/"/>
+    <id>http://ycllang.github.io/2018/10/01/hello-world/</id>
+    <published>2018-10-01T03:08:21.749Z</published>
+    <updated>2018-10-01T03:08:21.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Spring编程式事务管理</title>
     <link href="http://ycllang.github.io/2018/09/28/spring-transaction/"/>
     <id>http://ycllang.github.io/2018/09/28/spring-transaction/</id>
     <published>2018-09-28T07:00:00.000Z</published>
-    <updated>2018-09-30T04:54:58.194Z</updated>
+    <updated>2018-10-01T03:10:54.477Z</updated>
     
-    <content type="html"><![CDATA[<p>JDBC事务管理在Spring2.0下有两种编程式实现<br>1、PlatformTransactionManager<br>2、TransactionTemplate</p><p>主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的<br>实现类DataSourceTransactionManager。</p><p>1、实例化数据源参数。<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2、建立一个事务的定义。<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3、设置定义事务的传播行为，一般为PROPAGATION_REQUIRED。<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4、调用业务方法前，创建TransactionStatus实例。<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5、之后使用具体的SQL操作，发生异常，则回滚事务。<br>    transactionManager.rollback(status);<br>6、业务正常,则提交事务。<br>    transactionManager.commit(status);</p><p>例子：</p><p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p><p>可直接使用spring注入的 transactionManager;</p><p>//事务定义类<br>DefaultTransactionDefinition def = new DefaultTransactionDefinition();</p><p>def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>//返回事务对象<br>TransactionStatus status = tran.getTransaction(def);<br>try {<br>    //TODO; do something()<br>    tran.commit(status);<br>} catch (Exception ex) {<br>t   ran.rollback(status);<br>}</p>]]></content>
+    <content type="html"><![CDATA[<p>JDBC事务管理在Spring2.0下有两种编程式实现<br>1、PlatformTransactionManager<br>2、TransactionTemplate</p><p>主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的<br>实现类DataSourceTransactionManager。<br><a id="more"></a><br>1、实例化数据源参数。<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2、建立一个事务的定义。<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3、设置定义事务的传播行为，一般为PROPAGATION_REQUIRED。<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4、调用业务方法前，创建TransactionStatus实例。<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5、之后使用具体的SQL操作，发生异常，则回滚事务。<br>    transactionManager.rollback(status);<br>6、业务正常,则提交事务。<br>    transactionManager.commit(status);</p><p>例子：</p><p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p><p>可直接使用spring注入的 transactionManager;</p><p>//事务定义类<br>DefaultTransactionDefinition def = new DefaultTransactionDefinition();</p><p>def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>//返回事务对象<br>TransactionStatus status = tran.getTransaction(def);<br>try {<br>    //TODO; do something()<br>    tran.commit(status);<br>} catch (Exception ex) {<br>t   ran.rollback(status);<br>}</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;JDBC事务管理在Spring2.0下有两种编程式实现&lt;br&gt;1、PlatformTransactionManager&lt;br&gt;2、TransactionTemplate&lt;/p&gt;
-&lt;p&gt;主要学习PlatformTransactionManager,对于PlatformTran
-      
+      &lt;p&gt;JDBC事务管理在Spring2.0下有两种编程式实现&lt;br&gt;1、PlatformTransactionManager&lt;br&gt;2、TransactionTemplate&lt;/p&gt;
+&lt;p&gt;主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的&lt;br&gt;实现类DataSourceTransactionManager。&lt;br&gt;
     
     </summary>
     
       <category term="Spring" scheme="http://ycllang.github.io/categories/Spring/"/>
     
     
-  </entry>
-  
-  <entry>
-    <title>yangcl</title>
-    <link href="http://ycllang.github.io/2018/08/08/yangcl/"/>
-    <id>http://ycllang.github.io/2018/08/08/yangcl/</id>
-    <published>2018-08-08T10:35:33.000Z</published>
-    <updated>2018-08-08T10:35:33.643Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>lqq</title>
-    <link href="http://ycllang.github.io/2018/08/08/lqq/"/>
-    <id>http://ycllang.github.io/2018/08/08/lqq/</id>
-    <published>2018-08-08T10:30:50.000Z</published>
-    <updated>2018-08-08T10:30:50.222Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://ycllang.github.io/2018/08/08/hello-world/"/>
-    <id>http://ycllang.github.io/2018/08/08/hello-world/</id>
-    <published>2018-08-08T10:08:23.533Z</published>
-    <updated>2018-08-08T10:08:23.533Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
+      <category term="JAVA" scheme="http://ycllang.github.io/tags/JAVA/"/>
     
   </entry>
   

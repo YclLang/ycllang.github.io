@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JAVA," />
 
 
 
@@ -140,17 +140,18 @@
 
 
 
-<meta name="description" content="JDBC事务管理在Spring2.0下有两种编程式实现1、PlatformTransactionManager2、TransactionTemplate 主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的实现类DataSourceTransactionManager。 1、实例化数据源参数。    @Resour">
+<meta name="description" content="JDBC事务管理在Spring2.0下有两种编程式实现1、PlatformTransactionManager2、TransactionTemplate 主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的实现类DataSourceTransactionManager。">
+<meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring编程式事务管理">
 <meta property="og:url" content="http://ycllang.github.io/2018/09/28/spring-transaction/index.html">
 <meta property="og:site_name" content="live in Happyness">
-<meta property="og:description" content="JDBC事务管理在Spring2.0下有两种编程式实现1、PlatformTransactionManager2、TransactionTemplate 主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的实现类DataSourceTransactionManager。 1、实例化数据源参数。    @Resour">
+<meta property="og:description" content="JDBC事务管理在Spring2.0下有两种编程式实现1、PlatformTransactionManager2、TransactionTemplate 主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的实现类DataSourceTransactionManager。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T04:54:58.194Z">
+<meta property="og:updated_time" content="2018-10-01T03:10:54.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring编程式事务管理">
-<meta name="twitter:description" content="JDBC事务管理在Spring2.0下有两种编程式实现1、PlatformTransactionManager2、TransactionTemplate 主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的实现类DataSourceTransactionManager。 1、实例化数据源参数。    @Resour">
+<meta name="twitter:description" content="JDBC事务管理在Spring2.0下有两种编程式实现1、PlatformTransactionManager2、TransactionTemplate 主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的实现类DataSourceTransactionManager。">
 
 
 
@@ -251,12 +252,52 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-工具">
+          <a href="/tools/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            工具
           </a>
         </li>
       
@@ -336,7 +377,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChaoLang">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oymkn4m7b.bkt.clouddn.com/WechatIMG5.jpeg">
+      <meta itemprop="image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=fe51b186b299a9012f3853647cfc611e/0df3d7ca7bcb0a46137ee6ab6163f6246a60afc0.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -426,8 +467,7 @@
 
       
         <p>JDBC事务管理在Spring2.0下有两种编程式实现<br>1、PlatformTransactionManager<br>2、TransactionTemplate</p>
-<p>主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的<br>实现类DataSourceTransactionManager。</p>
-<p>1、实例化数据源参数。<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2、建立一个事务的定义。<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3、设置定义事务的传播行为，一般为PROPAGATION_REQUIRED。<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4、调用业务方法前，创建TransactionStatus实例。<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5、之后使用具体的SQL操作，发生异常，则回滚事务。<br>    transactionManager.rollback(status);<br>6、业务正常,则提交事务。<br>    transactionManager.commit(status);</p>
+<p>主要学习PlatformTransactionManager,对于PlatformTransactionManager,我们一般使用它的<br>实现类DataSourceTransactionManager。<br><a id="more"></a><br>1、实例化数据源参数。<br>    @Resource(name = “transactionManager”)<br>    private DataSourceTransactionManager transactionManager;<br>2、建立一个事务的定义。<br>    DefaultTransactionDefinition def = new DefaultTransactionDefinition();<br>3、设置定义事务的传播行为，一般为PROPAGATION_REQUIRED。<br>    def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);<br>4、调用业务方法前，创建TransactionStatus实例。<br>    TransactionStatus status = transactionManager.getTransaction(def);<br>5、之后使用具体的SQL操作，发生异常，则回滚事务。<br>    transactionManager.rollback(status);<br>6、业务正常,则提交事务。<br>    transactionManager.commit(status);</p>
 <p>例子：</p>
 <p>{JdbcTemplate template = new JdbcTemplate(datasource);<br>DataSourceTransactionManager tran = new DataSourceTransactionManager(datasource);}</p>
 <p>可直接使用spring注入的 transactionManager;</p>
@@ -474,8 +514,23 @@
     
 
     
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
 
+      
+    </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
       
 
       
@@ -486,15 +541,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/08/yangcl/" rel="next" title="yangcl">
-                <i class="fa fa-chevron-left"></i> yangcl
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/01/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -512,6 +567,32 @@
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
       
     </div>
   </div>
@@ -557,7 +638,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="http://oymkn4m7b.bkt.clouddn.com/WechatIMG5.jpeg"
+                src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=fe51b186b299a9012f3853647cfc611e/0df3d7ca7bcb0a46137ee6ab6163f6246a60afc0.jpg"
                 alt="ChaoLang" />
             
               <p class="site-author-name" itemprop="name">ChaoLang</p>
@@ -571,7 +652,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -588,6 +669,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -627,12 +717,12 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                Links
+                友情链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="www.xiang007.com" title="翔弈时代" target="_blank">翔弈时代</a>
+                    <a href="http://www.xiang007.com" title="翔弈时代" target="_blank">翔弈时代</a>
                   </li>
                 
               </ul>
@@ -743,10 +833,9 @@
   
 
 
+  
 
 
-  
-  
 
 
 
@@ -788,12 +877,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
   
 
 
@@ -907,6 +991,10 @@
 
   
 
-  
+   <!-- 页面点击小红心 -->
+   <script type="text/javascript" src="/js/src/love.js"></script>
+   
+     <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+   
 </body>
 </html>
